@@ -20,8 +20,10 @@
       height: 100vh; /* full viewport height */
       overflow-y: hidden !important;
     }
-  #timeline-embed .tl-slide .tl-media {
-    margin-left: 140px !important; /* move image right */
+/* Shift TimelineJS media container to the right */
+#timeline-embed .tl-slide .tl-media {
+    position: relative !important;
+    left: 40px !important;  /* move image right */
 }
 
 
@@ -96,6 +98,7 @@
   </script>
 </body>
 </html>
+
 
 
 
