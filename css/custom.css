@@ -1,7 +1,3 @@
-/* ==================================
-   YOUR ORIGINAL STYLES
-   ================================== */
-
 /* Headline in slide body */
 #timeline-embed .tl-slide .tl-headline {
   font-size: 32px !important;
@@ -26,8 +22,6 @@
   font-size: 14px !important;
   color: #555 !important;
 }
-
-/* Your custom font for the entire timeline */
 #timeline-embed,
 #timeline-embed *:not([class^="tl-icon-"]):not([class*=" tl-icon-"]) {
   font-family: "League Spartan", sans-serif !important;
@@ -40,13 +34,4 @@
   font-family: 'tl-icons' !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* ==================================
-   THE NEW SPACING RULE
-   ================================== */
-
-/* Reduce space between image and text */
-#timeline-embed .tl-slide .tl-media {
-  margin-bottom: 15px; /* Adjust this value as needed */
 }
