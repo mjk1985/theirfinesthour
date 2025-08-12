@@ -8,21 +8,33 @@
   <link rel="stylesheet" href="css/timeline.css" />
 
   <style>
- /* Reduce slide height */
+ /* Reduce slide and media height */
   #timeline-embed .tl-slide {
-    max-height: 400px !important; /* adjust to suit */
+    max-height: 360px !important; /* adjust as needed */
   }
   #timeline-embed .tl-slide-content-container {
-    max-height: 400px !important; /* matches above */
+    max-height: 360px !important;
+  }
+  #timeline-embed .tl-media {
+    max-height: 200px !important;
   }
 
-  /* Reduce padding inside slide */
+  /* Reduce padding inside slides */
   #timeline-embed .tl-slide .tl-text {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
   }
   #timeline-embed .tl-slide .tl-text p {
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Bring bottom navigation (timenav) upward */
+  #timeline-embed .tl-timenav {
+    height: 180px !important; /* smaller nav height */
+    bottom: 0 !important;
+  }
+  #timeline-embed .tl-timenav .tl-timeaxis {
+    bottom: 5px !important; /* push ticks closer to nav bottom */
   }
     /* League Spartan for slide content only */
     #timeline-embed .tl-slide .tl-text,
@@ -87,6 +99,7 @@
   </script>
 </body>
 </html>
+
 
 
 
