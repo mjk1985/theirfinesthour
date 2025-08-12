@@ -3,7 +3,19 @@
   font-size: 32px !important;
   color: #004080 !important;
 }
+/* Reduce space between media and text */
+#timeline-embed .tl-slide-content-container {
+  gap: 10px !important; /* default is much larger */
+}
 
+/* Optional: let the text take more space */
+#timeline-embed .tl-text {
+  flex: 1.2 !important; /* text a bit wider */
+}
+
+#timeline-embed .tl-media-content {
+  flex: 1 !important; /* image a bit narrower */
+}
 /* Slide body text */
 #timeline-embed .tl-text-content p {
   font-size: 18px !important;
@@ -35,3 +47,4 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
