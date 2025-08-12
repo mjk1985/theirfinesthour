@@ -26,13 +26,7 @@
   font-family: "League Spartan", sans-serif !important;
 }
 
-/* Explicitly restore arrow icon font */
-#timeline-embed .tl-slidenav-icon,
-#timeline-embed [class^="tl-icon-"],
-#timeline-embed [class*=" tl-icon-"] {
-  font-family: 'tl-icons' !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
+
 
 
