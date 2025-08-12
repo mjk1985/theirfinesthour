@@ -20,17 +20,17 @@
       height: 100vh; /* full viewport height */
       overflow-y: hidden !important;
     }
-    /* Reduce gap between media and text */
-#timeline-embed .tl-slide .tl-text {
-    padding-left: 0px !important; /* smaller padding on left */
+   /* Reduce horizontal gap between image and text in slides */
+#timeline-embed .tl-slide-content {
+    gap: 10px !important; /* reduce the flexbox gap */
 }
 
-#timeline-embed .tl-slide .tl-text-content {
-    margin-left: 0 !important; /* remove extra margin */
+#timeline-embed .tl-slide .tl-text {
+    padding-left: 0 !important;
 }
 
 #timeline-embed .tl-slide .tl-media {
-    margin-right: 0px !important; /* smaller gap on right of image */
+    margin-right: 0 !important;
 }
 
     /* League Spartan for slide content only */
@@ -103,6 +103,7 @@
   </script>
 </body>
 </html>
+
 
 
 
