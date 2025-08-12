@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="css/timeline.css" />
 
   <style>
+    window.timeline = new TL.Timeline('timeline-embed', sheetURL, {
+  timenav_position: 'bottom',
+  timenav_height_percentage: 20, // default is 25, smaller = more room for slides
+  timenav_mobile_height_percentage: 25, // tweak for mobile view
+  start_at_end: false
+});
  /* Reduce slide and media height */
   #timeline-embed .tl-slide {
     max-height: 360px !important; /* adjust as needed */
@@ -99,6 +105,7 @@
   </script>
 </body>
 </html>
+
 
 
 
