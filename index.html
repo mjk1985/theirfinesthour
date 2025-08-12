@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Timeline — League Spartan slides + nav</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/timeline.css" />
+
+  <style>
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden; /* hide vertical scrollbar */
+  }
+
+  #timeline-embed {
+    overflow-y: hidden !important; /* ensure no scroll inside timeline container */
+  }
+    /* League Spartan for slide content only */
+    #timeline-embed .tl-slide .tl-text,
+    #timeline-embed .tl-slide .tl-text * {
+      font-family: "League Spartan", sans-serif !important;
+    }
+
+    /* League Spartan for navigation bar at bottom only */
+    #timeline-embed .tl-timenav,
+    #timeline-embed .tl-timenav * {
+      font-family: "League Spartan", sans-serif !important;
+    }
+
+    /* Keep icon font intact */
+    #timeline-embed [class^="tl-icon-"],
+    #timeline-embed [class*=" tl-icon-"] {
+      font-family: "tl-icons" !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Slide headline colour & spacing */
+    #timeline-embed .tl-slide .tl-text h2.tl-headline,
+    #timeline-embed .tl-slide .tl-text h2.tl-headline-title {
+      color: #0b2447 !important;
+      margin-top: 12px !important; /* moves headline down slightly */
+    }
+
+    /* Date above slide title */
+    #timeline-embed .tl-slide .tl-text .tl-headline-date {
+      font-size: 28px !important;
+      font-weight: 700 !important;
+    }
+  /* League Spartan for navigation bar at bottom only */
+  #timeline-embed .tl-timenav,
+  #timeline-embed .tl-timenav * {
+    font-family: "League Spartan", sans-serif !important;
+    color: #333333 !important; /* darker grey */
+  }
+
+
+   /* Larger major tick dates on bottom axis, moved down */
+  #timeline-embed .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-tick {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+  }
+
+  /* Keep icon font intact */
+  #timeline-embed [class^="tl-icon-"],
+  #timeline-embed [class*=" tl-icon-"] {
+    font-family: "tl-icons" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  </style>
+</head>
+<body>
+  <div id="timeline-embed" style="width:100%; height:650px;"></div>
+
+  <script src="js/timeline.js"></script>
+  <script>
+    const sheetURL =
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDTurmbpRPXGdjowTYkUjG9hSqTBVaOz5r3SbpR22BQY16jZ79kQqMhRm6d8PMtg/pubhtml';
+    window.timeline = new TL.Timeline('timeline-embed', sheetURL, {
+      timenav_position: 'bottom',
+      start_at_end: false
+    });
+  </script>
+</body>
+</html>
