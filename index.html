@@ -8,14 +8,22 @@
   <link rel="stylesheet" href="css/timeline.css" />
 
   <style>
-/* Condense slide content */
-    #timeline-embed .tl-slide .tl-text {
-      padding-top: 10px !important;
-      padding-bottom: 10px !important;
-    }
-    #timeline-embed .tl-slide .tl-text p {
-      margin-bottom: 8px !important;
-    }
+ /* Reduce slide height */
+  #timeline-embed .tl-slide {
+    max-height: 400px !important; /* adjust to suit */
+  }
+  #timeline-embed .tl-slide-content-container {
+    max-height: 400px !important; /* matches above */
+  }
+
+  /* Reduce padding inside slide */
+  #timeline-embed .tl-slide .tl-text {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  #timeline-embed .tl-slide .tl-text p {
+    margin-bottom: 8px !important;
+  }
     /* League Spartan for slide content only */
     #timeline-embed .tl-slide .tl-text,
     #timeline-embed .tl-slide .tl-text * {
@@ -79,6 +87,7 @@
   </script>
 </body>
 </html>
+
 
 
 
