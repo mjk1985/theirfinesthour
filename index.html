@@ -20,13 +20,17 @@
       height: 100vh; /* full viewport height */
       overflow-y: hidden !important;
     }
-   /* Force media and text closer together in TimelineJS slides */
-#timeline-embed .tl-slide .tl-media {
-    width: 40% !important;  /* smaller image column */
+   /* Reduce horizontal gap between image and text in slides */
+#timeline-embed .tl-slide-content {
+    gap: 10px !important; /* reduce the flexbox gap */
 }
 
 #timeline-embed .tl-slide .tl-text {
-    width: 60% !important;  /* larger text column */
+    padding-left: 0 !important;
+}
+
+#timeline-embed .tl-slide .tl-media {
+    margin-right: 0 !important;
 }
 
 
@@ -100,6 +104,7 @@
   </script>
 </body>
 </html>
+
 
 
 
