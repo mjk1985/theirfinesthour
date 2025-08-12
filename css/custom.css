@@ -1,3 +1,5 @@
+/* custom.css (Updated) */
+
 /* Headline in slide body */
 #timeline-embed .tl-slide .tl-headline {
   font-size: 32px !important;
@@ -10,6 +12,16 @@
   line-height: 1.6 !important;
   color: #222 !important;
 }
+
+/* ============================================== */
+/* == ADD THIS NEW BLOCK HERE == */
+/* ============================================== */
+/* Reduce space between image and text */
+#timeline-embed .tl-slide .tl-media {
+  margin-bottom: 15px; /* Default is ~40px. Adjust this value as needed. */
+}
+/* ============================================== */
+
 
 /* Navigation pane dates (flag text) */
 #timeline-embed .tl-timemarker .tl-headline {
