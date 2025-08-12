@@ -15,13 +15,11 @@
       overflow-y: hidden; /* hide vertical scrollbar */
     }
 
-/* Change TimelineJS column split */
-#timeline-embed .tl-slide-content .tl-media {
-    flex: 0 0 42% !important; /* narrower image column */
-}
-
-#timeline-embed .tl-slide-content .tl-text {
-    flex: 0 0 58% !important; /* wider text column */
+/* Remove default padding inside TimelineJS slide columns */
+#timeline-embed .tl-slide .tl-media-content,
+#timeline-embed .tl-slide .tl-text-content {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 
@@ -96,6 +94,7 @@
   </script>
 </body>
 </html>
+
 
 
 
