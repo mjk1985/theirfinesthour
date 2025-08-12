@@ -8,40 +8,19 @@
   <link rel="stylesheet" href="css/timeline.css" />
 
   <style>
-    window.timeline = new TL.Timeline('timeline-embed', sheetURL, {
-  timenav_position: 'bottom',
-  timenav_height_percentage: 20, // default is 25, smaller = more room for slides
-  timenav_mobile_height_percentage: 25, // tweak for mobile view
-  start_at_end: false
-});
- /* Reduce slide and media height */
-  #timeline-embed .tl-slide {
-    max-height: 160px !important; /* adjust as needed */
-  }
-  #timeline-embed .tl-slide-content-container {
-    max-height: 160px !important;
-  }
-  #timeline-embed .tl-media {
-    max-height: 100px !important;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: hidden; /* hide vertical scrollbar */
+    }
 
-  /* Reduce padding inside slides */
-  #timeline-embed .tl-slide .tl-text {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-  }
-  #timeline-embed .tl-slide .tl-text p {
-    margin-bottom: 6px !important;
-  }
+    #timeline-embed {
+      width: 100%;
+      height: 100vh; /* full viewport height */
+      overflow-y: hidden !important;
+    }
 
-  /* Bring bottom navigation (timenav) upward */
-  #timeline-embed .tl-timenav {
-    height: 180px !important; /* smaller nav height */
-    bottom: 0 !important;
-  }
-  #timeline-embed .tl-timenav .tl-timeaxis {
-    bottom: 5px !important; /* push ticks closer to nav bottom */
-  }
     /* League Spartan for slide content only */
     #timeline-embed .tl-slide .tl-text,
     #timeline-embed .tl-slide .tl-text * {
@@ -52,6 +31,7 @@
     #timeline-embed .tl-timenav,
     #timeline-embed .tl-timenav * {
       font-family: "League Spartan", sans-serif !important;
+      color: #333333 !important; /* darker grey */
     }
 
     /* Keep icon font intact */
@@ -66,7 +46,7 @@
     #timeline-embed .tl-slide .tl-text h2.tl-headline,
     #timeline-embed .tl-slide .tl-text h2.tl-headline-title {
       color: #0b2447 !important;
-      margin-top: 14px !important; /* moves headline down slightly */
+      margin-top: 14px !important;
     }
 
     /* Date above slide title */
@@ -74,45 +54,31 @@
       font-size: 28px !important;
       font-weight: 700 !important;
     }
-  /* League Spartan for navigation bar at bottom only */
-  #timeline-embed .tl-timenav,
-  #timeline-embed .tl-timenav * {
-    font-family: "League Spartan", sans-serif !important;
-    color: #333333 !important; /* darker grey */
-  }
-
-
-  /* Keep icon font intact */
-  #timeline-embed [class^="tl-icon-"],
-  #timeline-embed [class*=" tl-icon-"] {
-    font-family: "tl-icons" !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
   </style>
 </head>
 <body>
-  <div id="timeline-embed" style="width:100%; height:650px;"></div>
+  <div id="timeline-embed"></div>
 
   <script src="js/timeline.js"></script>
   <script>
     const sheetURL =
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDTurmbpRPXGdjowTYkUjG9hSqTBVaOz5r3SbpR22BQY16jZ79kQqMhRm6d8PMtg/pubhtml';
+    
     window.timeline = new TL.Timeline('timeline-embed', sheetURL, {
       timenav_position: 'bottom',
       start_at_end: false
     });
+
+    // Adjust layout after timeline loads
+    timeline.on('loaded', function() {
+      const slideContainer = document.querySelector('.tl-slide-content-container');
+      const timenav = document.querySelector('.tl-timenav');
+
+      if (slideContainer) slideContainer.style.height = '60%';
+      if (timenav) timenav.style.height = '20%';
+
+      document.querySelector('#timeline-embed').style.overflowY = 'hidden';
+    });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
