@@ -2,7 +2,6 @@
 #timeline-embed .tl-slide .tl-headline {
   font-size: 32px !important;
   color: #004080 !important;
-}
 
 /* Slide body text */
 #timeline-embed .tl-text-content p {
@@ -22,9 +21,9 @@
   font-size: 14px !important;
   color: #555 !important;
 }
-
-/* Apply League Spartan everywhere except icons */
 #timeline-embed,
 #timeline-embed *:not([class^="tl-icon-"]):not([class*=" tl-icon-"]) {
   font-family: "League Spartan", sans-serif !important;
+}
+
 }
