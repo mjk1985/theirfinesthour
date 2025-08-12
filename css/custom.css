@@ -3,20 +3,17 @@
 font-size: 32px !important;
 color: #004080 !important;
 }
-
 /* Slide body text */
 #timeline-embed .tl-text-content p {
 font-size: 18px !important;
 line-height: 1.6 !important;
 color: #222 !important;
 }
-
 /* Navigation pane dates (flag text) */
 #timeline-embed .tl-timemarker .tl-headline {
 font-size: 16px !important;
 color: #800000 !important;
 }
-
 /* Navigation pane grey description text */
 #timeline-embed .tl-timemarker .tl-timemarker-description {
 font-size: 14px !important;
@@ -26,7 +23,6 @@ color: #555 !important;
 #timeline-embed :not([class^="tl-icon-"]):not([class=" tl-icon-"]) {
 font-family: "League Spartan", sans-serif !important;
 }
-
 /* Explicitly restore arrow icon font /
 #timeline-embed .tl-slidenav-icon,
 #timeline-embed [class^="tl-icon-"],
